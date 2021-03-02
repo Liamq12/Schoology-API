@@ -15,12 +15,12 @@ This will bring up a screen that lists your consumer key, and your consumer secr
 
 To get an OAuth token and secret, first open postman and input this URL: https://api.schoology.com/v1/oauth/request_token?oauth_consumer_key=&oauth_timestamp=&oauth_signature_method=PLAINTEXT&oauth_version=1.0&oauth_nonce=&oauth_signature=
 
-For oauth_consumer_key, enter the consumer key from your schoology API Page
-For oauth_timestamp, enter the current Unix time code, you will need to do this each time you send a request. You can find the current time code <a href="https://www.epochconverter.com/">here</a>.
-For oauth_signature_method, we can use plaintext since API calls are made with HTTPS instead of HTTP
-For oauth_version, we are using OAuth 1.0, so it is set to 1.0
-For oauth_nonce, enter any random short string. 
-For oauth_signature, enter your consumer secret (found on the same page as your consumer key) %26, for example, "123456789012345678901234567890%26"
+For oauth_consumer_key, enter the consumer key from your schoology API Page <br/>
+For oauth_timestamp, enter the current Unix time code, you will need to do this each time you send a request. You can find the current time code <a href="https://www.epochconverter.com/">here</a>.<br/>
+For oauth_signature_method, we can use plaintext since API calls are made with HTTPS instead of HTTP<br/>
+For oauth_version, we are using OAuth 1.0, so it is set to 1.0<br/>
+For oauth_nonce, enter any random short string. <br/>
+For oauth_signature, enter your consumer secret (found on the same page as your consumer key) %26, for example, "123456789012345678901234567890%26"<br/>
 
 Send the request as a GET, and record the response. 
 
@@ -30,9 +30,9 @@ A successful response should give status 200, and 3 things. A oauth_token, oauth
 
 Now that you have made Oauth keys, you must authorize your application on an account. To do this, input this URL into postman and set the following parameters. https://[your district schoology address]/oauth/authorize?oauth_consumer_key=&oauth_token=&oauth_token_secret=
 
-For oauth_consumer_key, enter your OAuth consumer key from your schoology API Page
-For oauth_token, enter your OAuth token from your Oauth Authorization response.
-For oauth_token_secret, enter your OAuth token secret from your Oauth Authorization Response
+For oauth_consumer_key, enter your OAuth consumer key from your schoology API Page <br/>
+For oauth_token, enter your OAuth token from your Oauth Authorization response.<br/>
+For oauth_token_secret, enter your OAuth token secret from your Oauth Authorization Response<br/>
 
 Instead of running this link in postman, copy and paste it into your web browser and approve your application. If done successfully, the user will be prompted to Approve or Deny the application's request for access. Select Approve and navigate back to postman.
 
